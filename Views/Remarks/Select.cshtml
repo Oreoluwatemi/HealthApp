@@ -1,0 +1,22 @@
+﻿@model OreoHealth.Models.Remarks
+@{
+    ViewData["Title"] = "Select";
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @*<title>@ViewData["Title"] - OreoHealth</title>*@
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/homepage.css" />
+</head>
+<body>
+    <div class="container">
+        @Html.DisplayFor(modelItem => Model.FullName)
+        <div>
+            <a asp-action="Create" asp-controller="Remarks" asp-route-name="@Model.FullName">Add Remarks</a>
+        </div>
+        <div>
+            <a asp-action="Details" asp-controller="Remarks" asp-route-name="@Model.FullName">View Remarks</a>
+        </div>
+        </div>
+    </body>

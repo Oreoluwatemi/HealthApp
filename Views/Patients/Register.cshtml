@@ -1,0 +1,73 @@
+﻿@model OreoHealth.ViewModel.RegistrationView
+@{
+    ViewBag.Title = "Register";
+}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - OreoHealth</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/homepage.css" />
+</head>
+@*When user clicks signup in the layout menu, the registration form is displayed *@
+@*Once user successfully registers, they are redirected to login page*@
+<body>
+    <h1 class="form-title">REGISTER</h1>
+    <div class="login-form">
+
+        <form asp-action="Register" method="post">
+            @Html.ValidationSummary()
+            <div class="form-group">
+                <label class="form-control-label" asp-for="FirstName">First Name: </label>
+                <input class="form-control" type="text" asp-for="FirstName" />
+            </div>
+            <div class="form-group">
+                <label class="form-control-label" asp-for="LastName">Last Name: </label>
+                <input class="form-control" type="text" asp-for="LastName" />
+            </div>
+            <div class="form-group">
+                <label class="form-control-label" asp-for="PhoneNumber">Phone Number: </label>
+                <input class="form-control" type="tel" asp-for="PhoneNumber" />
+            </div>
+            <div class="form-group">
+                <label class="form-control-label" asp-for="Address">Address: </label>
+                <input class="form-control" type="text" asp-for="Address" />
+            </div>
+            <div class="form-group">
+                <label class="form-control-label" asp-for="Gender">Gender: </label> &nbsp; &nbsp;
+                <input type="radio" asp-for="Gender" name="gender" value="Male" /> Male &nbsp; &nbsp;
+                <input type="radio" asp-for="Gender" name="gender" value="Female" /> Female
+            </div>
+            <div class="form-group">
+                <label class="form-control-label" asp-for="Email">Email: </label>
+                <input class="form-control" type="email" asp-for="Email" />
+            </div>
+            <div class="form-group">
+                <label class="form-control-label" asp-for="Password">Password: </label>
+                <input class="form-control" type="password" asp-for="Password" />
+            </div>
+            <div class="form-group">
+                <label class="form-control-label" asp-for="ConfirmPassword">Confirm Password: </label>
+                <input class="form-control" type="password" asp-for="ConfirmPassword" />
+            </div>
+            <div class="form-group">
+                <label class="form-control-label" asp-for="BirthDate">Date Of Birth: </label>
+                <input class="form-control" asp-for="BirthDate" />
+            </div>
+            <div class="form_button">
+                <button type="submit" class="btn">REGISTER</button>
+            </div>
+
+        </form>
+
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</body>
+</html>

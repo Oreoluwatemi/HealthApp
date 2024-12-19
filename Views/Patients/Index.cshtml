@@ -1,0 +1,35 @@
+@model OreoHealth.Models.Patient
+
+@{  ViewData["Title"] = "Index"; }
+
+@*When user successfully login this page is displayed welcoming them*@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @*<title>@ViewData["Title"] - OreoHealth</title>*@
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/homepage.css" />
+</head>
+<body>
+<div class="container">
+    <div>
+        <h1>Welcome  @Html.DisplayFor(model => model.FirstName)</h1>
+        @*Then user can book an appointment*@
+        <div>
+            <a asp-action="Create" asp-controller="Appointments" asp-route-id="@Model.Id">Book an Appointment</a>
+
+        </div>
+        @*User can view their account details*@
+        <div>
+            <a asp-action="Details" asp-route-id="@Model.Id">Account</a>
+
+        </div>
+        <div>
+
+            <a asp-action="Logout" asp-route-id="@Model.Id">Logout</a>
+        </div>
+    </div>
+    </div>
+</body>
+
+

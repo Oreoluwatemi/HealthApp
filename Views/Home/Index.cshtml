@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - OreoHealth</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/homepage.css" />
+</head>
+<body>
+    <div id="section1">
+        <div id="section1_img">
+            <h1>OREO HEALTH</h1>
+            <img src="Images/homepage1.jpeg" />
+        </div>
+    </div>
+    <div class="jumbotron" style="background:transparent">
+        <h1 class="display-4">WHO WE ARE</h1>
+        <p class="lead">
+            We are an organisation theat helps to improve your mental health. We are equipped with
+            professinal who have accredited lincenses to serve you better
+        </p>
+        <p class="lead">We are always here for you anywhere you are!</p>
+
+        <br /><br /><br />
+        <hr class="my-4">
+        <br /><br /><br />
+                    <div id="section2">
+                        <h2 class="display-4">Services we offer</h2>
+                        <ul class="lead">
+                            <li class="lead">One on one meeting with a professional to cater to your needs</li>
+                            <li class="lead">Book an online appointment anytime</li>
+                            <li class="lead">Follow up from us on your wellbeing!</li>
+                        </ul>
+                        <br /><br /><br />
+
+                        <h1 class="lead">Sign Up today!</h1>
+                        <p class="lead">
+                            <a class="btn btn-primary btn-lg" asp-area="" asp-controller="Patients" asp-action="Register" role="button">Click here to Register</a>
+                        </p>
+                    </div>
+
+
+    </div>
+    <br /><br /><br /><br /><br /><br />
+</body>
+</html>
