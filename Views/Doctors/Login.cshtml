@@ -1,0 +1,37 @@
+﻿@model OreoHealth.ViewModel.LoginView
+@{
+    ViewBag.Title = "Login";
+}
+
+@*When user clicks on admin which is dedicated for the therapists, the login page is displayed for the doctor in the system to login*@
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - OreoHealth</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/homepage.css" />
+</head>
+<body>
+
+    <h1 class="form-title">ADMIN LOGIN</h1>
+    <div class="login-form">
+
+        <form asp-action="Login" method="post">
+            @Html.ValidationSummary()
+
+            <div class="form-group">
+                <label class="form-control-label" asp-for="Email">EMAIL</label>
+                <input type="email" class="form-control" asp-for="Email">
+            </div>
+            <div class="form-group">
+                <label class="form-control-label" asp-for="Password">PASSWORD</label>
+                <input type="password" class="form-control" asp-for="Password">
+            </div>
+            <div class="form_button">
+                <button type="submit" class="btn">LOGIN</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
